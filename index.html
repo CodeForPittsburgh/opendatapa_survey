@@ -1,0 +1,154 @@
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title></title>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+
+  <div class="home">
+    <div id="headerbar" class="headerbar">
+      <img class="icon" src="img/opendata_logo.png">
+      <div class="text">Pennsylvania Open Data Candidate Questionnaire</div>
+      <div class="dropdown" id="dropdown">
+        <div class="title">About</div>
+        <div class="description">
+          We are representatives from OpenPGH and Code for Philly. 
+          We are part of a national movement of citizens, 
+          technologists, and public servants working together to 
+          improve the quality of life in the Commonwealth through 
+          the use of information and technology. Given the success 
+          of open data initiatives at the local level, our goal is to open 
+          a dialogue for open data at the state level.
+        </div>
+<!--         <div class="title">What Is Open Data</div>
+        <div class="description">
+          Most often, ‘open data’ refers to the idea that data 
+          controlled by a government body should be accessible to 
+          citizens and other government bodies in a structured 
+          format. In an open structured format, computer programs 
+          can readily understand and process the data. For example, 
+          a CSV is an open structured format, while a PDF is not. 
+          Open data policies reduce cost and technology barriers, 
+          which limit citizens’ access to government data.The 
+          nonpartisan Sunlight Foundation publishes best practices 
+          for open data policies.          
+        </div>    -->     
+        <div class="title">Contact</div>
+        <div class="description">
+          Email us at 
+          <span style="font-family: 'Whitney Book SC';">opendatapa@gmail.com</span>
+          </br></br>
+          Tweet us at 
+          <span style="font-family: 'Whitney Book SC';">@OpenPgh</span>
+          and
+          <span style="font-family: 'Whitney Book SC';">@CodeforPhilly</span> 
+        </div>
+      </div>
+    </div>
+
+    <div class="posts">
+
+      <div class="post">
+        <div class="title">Question 1</div>
+        <div class="detail">
+          <div class="text">
+            Many businesses, nonprofits, and government agencies view information as an asset. If elected, how will your administration increase access to this important asset for benefit of the Commonwealth?  
+          </div>
+          <div class="numberofresponses">
+            <div class="number">7 Responses</div>
+            <a href="./question1.html"><img class="arrow" src="img/arrow.png" ng-click="navigate('question1')"></a>
+          </div>        
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="title">Question 2</div>
+        <div class="detail">
+          <div class="text">
+            Public information is often siloed within various state agencies, and not always easily accessible to residents or other units of government. How will your administration improve information sharing in Pennsylvania?
+          </div>
+          <div class="numberofresponses">
+            <div class="number">7 Responses</div>
+            <a href="./question2.html"><img class="arrow" src="img/arrow.png" ng-click="navigate('question1')"></a>
+          </div>        
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="title">Question 3</div>
+        <div class="detail">
+          <div class="text">
+            Open sharing of information and information technology has helped to improve the relationship between citizens and government. How will your administration use information and technology to better connect with citizens?
+          </div>
+          <div class="numberofresponses">
+            <div class="number">7 Responses</div>
+            <a href="./question3.html"><img class="arrow" src="img/arrow.png" ng-click="navigate('question1')"></a>
+          </div>        
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="title">Question 4</div>
+        <div class="detail">
+          <div class="text">
+            Many datasets controlled by the state are subject to disclosure under the Open Records Law. Do you support making the default policy that such datasets are proactively available online according to commonly accepted open data guidelines (see FAQ for details)? 
+            </br></br>
+            Please indicate Yes or No and explain your position.
+          </div>
+          <div class="numberofresponses">
+            <div class="number">7 Responses</div>
+            <a href="./question4.html"><img class="arrow" src="img/arrow.png" ng-click="navigate('question1')"></a>
+          </div>        
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="title">Question 5</div>
+        <div class="detail">
+          <div class="text">
+            Current laws protecting personal privacy would still apply to all information released under an open data policy. Beyond this protected information, what specific data sets do you feel should be restricted for public access?
+          </div>
+          <div class="numberofresponses">
+            <div class="number">7 Responses</div>
+            <a href="./question5.html"><img class="arrow" src="img/arrow.png" ng-click="navigate('question1')"></a>
+          </div>        
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="title">Question 6</div>
+        <div class="detail">
+          <div class="text">
+            Many cities and states around the U.S. are adopting open data policies and practices to share information with residents and other stakeholders. What are the 3 most important things you would do as governor to make state data “open”?
+          </div>
+          <div class="numberofresponses">
+            <div class="number">7 Responses</div>
+            <a href="./question6.html"><img class="arrow" src="img/arrow.png" ng-click="navigate('question1')"></a>
+          </div>        
+        </div>
+      </div>        
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    function expandHeader() {
+      var dropdown = document.getElementById("dropdown");
+      dropdown.style.height = dropdown.style.height === "360px" ? "0px" : "360px";
+    }
+
+    var header = document.getElementById("headerbar");
+
+    if(header.addEventListener) {
+      header.addEventListener('click', expandHeader, false);
+    } else if(header.attachEvent) {
+      header.attachEvent('onclick', function(){ 
+        return expandHeader.apply(header, [window.event])
+      });
+    }
+
+  </script>
+</body>
+</html>
